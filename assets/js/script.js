@@ -28,29 +28,10 @@ function imprimirSecoes(secao){
     areaSecoes.appendChild(appSecao)
 }
 
+//**********************************/
+// AQUI VOCÊ PODE CRIAR SEU DESAFIO
+//***********************************/
 const inputNovaSecao = document.querySelector(".app_container_add_secao input").value
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
