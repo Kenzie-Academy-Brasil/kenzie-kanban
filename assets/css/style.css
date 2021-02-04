@@ -1,0 +1,338 @@
+/*
+Theme Name: Desenvolvimentos
+Theme URI: http://www.desenvolvimentos.com.br
+Author: HC Desenvolvimentos
+Author URI: https://hcdesenvolvimentos.com.br;
+Description: Descrção do thema.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: desenvolvimentos
+Tags: 
+
+--------------------------------------------
+ESTRUTURAÇÃO BASE (HC Desenvolvimentos v1)
+--------------------------------------------
+**** DECLARAÇÃO DE VARIÁVEIS
+**** ESTILOS GERAIS
+**** BODY
+**** TOPO
+**** RODAPÉ
+**** PÁGINA INICIAL
+**** EXTRAS
+**** @MEDIA
+
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+
+*/
+
+/* IMPORTAÇÃO DE ARQUIVOS*/
+/*@import url("fonts.css");*/
+/* IMPORTAÇÃO DE ARQUIVOS*/
+
+/* VARIÁVEIS */
+:root {
+    /* --montserrat: "Montserrat", sans-serif;
+    --open-sans: "Open Sans", sans-serif;
+    --azul-principal: #009bdb; */
+  }
+  /* VARIÁVEIS */
+  
+  /* IMPORTAÇÃO DE FONTES*/
+  @font-face {
+  }
+  
+  /* IMPORTAÇÃO DE FONTES*/
+  
+  /* GERAL */
+  html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+  }
+  .hidden{
+    display: none !important;
+  }
+  /* GERAL */
+  
+  /* HTML */
+  html{
+    font-size: 16px;
+  }
+  /* HTML */
+  
+  /* BODY */
+  body{
+    height: 100vh;
+    background-color: #072446;
+  }
+  /* BODY */
+  
+  /* HEADER */
+  header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(9 121 251 / 0.3);
+    padding: 10px 30px;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+    header > div{
+      flex-basis: 209px;
+    }
+      header .app_nome{}
+          header .app_nome h1{
+            font-size: 1.7rem;
+            color: #fff;
+            background-color: rgb(255 255 255 / 0.3);
+            padding: 2px 7px;
+            border-radius: 4px;
+          }
+        header .app_logo{}
+          header .app_logo figure{}
+            header .app_logo figure img{
+              display: block;
+              width: 100%;
+              max-width: 50px;
+              margin: 0 auto;
+            }
+            header .app_logo figure figcaption{}
+        header .app_menu_header{
+          text-align: right;
+        }
+          header .app_menu_header span{
+            display: inline-block;
+            background-color: rgb(255 255 255 / 0.3);
+            padding: 1px 2px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: ease-in-out .1s;
+            -webkit-transition: ease-in-out .1s;
+            -moz-transition: ease-in-out .1s;
+            -ms-transition: ease-in-out .1s;
+            -o-transition: ease-in-out .1s;
+          }
+          header .app_menu_header span:hover{
+            background-color: rgb(255 255 255 / 0.5);
+          }
+            header .app_menu_header span img{
+              display: block;
+              width: 30px;
+            }
+  /* HEADER */
+  
+  /* FOOTER */
+  /* FOOTER */
+  
+  /* INICIAL */
+  .app_board{
+    position: relative;
+    height: 100vh;
+  }
+    .app_board .app_secoes{
+      user-select: none;
+      white-space: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      padding: 87px 30px 0;
+      box-sizing: border-box;
+    }
+      .app_board .app_secoes .app_secao{
+        width: 100%;
+        width: 400px;
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: #ebecf0;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        white-space: normal;
+        margin: 0 10px 0 0;
+        display: inline-block;
+        vertical-align: top;
+      }
+        .app_board .app_secoes .app_secao .app_secao_header{}
+          .app_board .app_secoes .app_secao .app_secao_header input{
+            display: block;
+            width: 100%;
+            padding: 6px 0;
+            border: none;
+            background-color: transparent;
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+          }
+          .app_board .app_secoes .app_secao .app_secao_header input:focus{
+            background-color: #fff;
+          }
+        .app_board .app_secoes .app_secao ul{}
+          .app_board .app_secoes .app_secao ul li{
+            background-color: #fff;
+            border-radius: 4px;
+            margin: 6px 0 10px;
+            padding: 10px;
+            box-shadow: 0 1px 0 rgba(9,30,66,.25);
+          }
+            .app_board .app_secoes .app_secao ul li h2{
+              font-size: 1rem;
+              font-weight: 500;
+              letter-spacing: 0.3px;
+              margin: 0 0 15px;
+            }
+            .app_board .app_secoes .app_secao ul li p{
+              font-size: 0.9rem;
+            }
+        .app_board .app_secoes .app_secao .app_secao_footer{
+          display: flex;
+          flex-direction: column;
+        }
+          .app_board .app_secoes .app_secao .app_secao_footer button{
+            border: none;
+            padding: 8px 0;
+            border-radius: 4px;
+            cursor: pointer;
+            outline: none;
+            background-color: transparent;
+            opacity: 0.6;
+            transition: ease-in-out .1s;
+            -webkit-transition: ease-in-out .1s;
+            -moz-transition: ease-in-out .1s;
+            -ms-transition: ease-in-out .1s;
+            -o-transition: ease-in-out .1s;
+          }
+          .app_board .app_secoes .app_secao .app_secao_footer button:hover{
+            background-color: rgb(94 108 132 / 0.1);
+            opacity: 1;
+          }
+          .app_board .app_secoes .app_secao .app_secao_footer .app_secao_footer_card{
+            display: flex;
+            flex-direction: column;
+          }
+            .app_board .app_secoes .app_secao .app_secao_footer .app_secao_footer_card label{}
+            .app_board .app_secoes .app_secao .app_secao_footer .app_secao_footer_card input, .app_board .app_secoes .app_secao .app_secao_footer .app_secao_footer_card textarea{
+              border: none;
+              background-color: #fff;
+              padding: 8px 10px;
+              outline: none;
+              font-size: 0.85rem;
+            }
+            .app_board .app_secoes .app_secao .app_secao_footer .app_secao_footer_card input{
+              border-bottom: 1px solid #ccc;
+              border-radius: 4px 4px 0 0;
+              margin: 6px 0 0;
+            }
+            .app_board .app_secoes .app_secao .app_secao_footer .app_secao_footer_card textarea{
+              border-radius: 0 0 4px 4px;
+              box-shadow: 0 1px 0 rgba(9,30,66,.25);
+              resize: vertical;
+              height: 50px;
+            }
+            .app_board .app_secoes .app_secao .app_secao_footer .app_secao_footer_card .app_secao_footer_salvar_card{
+              margin: 10px 0 0;
+              background-color: #0979fb;
+              color: #fff;
+              opacity: 1;
+              width: 100%;
+              max-width: 100px;
+              transition: ease-in-out .1s;
+              -webkit-transition: ease-in-out .1s;
+              -moz-transition: ease-in-out .1s;
+              -ms-transition: ease-in-out .1s;
+              -o-transition: ease-in-out .1s;
+            }
+            .app_board .app_secoes .app_secao .app_secao_footer .app_secao_footer_card .app_secao_footer_salvar_card:hover{
+              background-color: #0763ce;
+            }
+      
+      .app_board .app_secoes .app_add_secao{
+        display: inline-block;
+        vertical-align: top;
+        width: 400px;
+      }
+        .app_board .app_secoes .app_add_secao .app_button_add_secao{
+          display: inline-block;
+          width: 100%;
+          padding: 15px 0;
+          background-color: rgb(255 255 255 / 20%);
+          border: none;
+          font-size: 1rem;
+          border-radius: 4px;
+          color: #fff;
+          transition: ease-in-out .1s;
+          -webkit-transition: ease-in-out .1s;
+          -moz-transition: ease-in-out .1s;
+          -ms-transition: ease-in-out .1s;
+          -o-transition: ease-in-out .1s;
+          cursor: pointer;
+          outline: none;
+        }
+        .app_board .app_secoes .app_add_secao .app_button_add_secao:hover{
+          background-color: rgb(255 255 255 / 30%);
+        }
+        .app_board .app_secoes .app_add_secao .app_container_add_secao{
+          background-color: #ebecf0;
+          display: flex;
+          flex-direction: column;
+          padding: 10px;
+          border-radius: 4px;
+        }
+          .app_board .app_secoes .app_add_secao .app_container_add_secao input{
+            border: none;
+            background-color: #fff;
+            padding: 8px 10px;
+            outline: none;
+            font-size: 0.85rem;
+            border-radius: 4px;
+          }
+          .app_board .app_secoes .app_add_secao .app_container_add_secao .app_input_add_secao{
+            margin: 10px 0 0;
+            background-color: #0979fb;
+            color: #fff;
+            opacity: 1;
+            width: 100%;
+            max-width: 100px;
+            transition: ease-in-out .1s;
+            -webkit-transition: ease-in-out .1s;
+            -moz-transition: ease-in-out .1s;
+            -ms-transition: ease-in-out .1s;
+            -o-transition: ease-in-out .1s;
+            border: none;
+            padding: 8px 0;
+            border-radius: 4px;
+            cursor: pointer;
+            outline: none;
+          }
+  /* INICIAL */
+  
+  /* EXTRAS */
+  ::-webkit-scrollbar{
+    background-color: transparent;
+    height: 12px;
+  }
+  ::-webkit-scrollbar-button{}
+  ::-webkit-scrollbar-track{}
+  ::-webkit-scrollbar-track-piece{}
+  ::-webkit-scrollbar-thumb{
+    background-color: rgb(255 255 255 / 20%);
+    border-radius: 14px;
+  }
+  ::-webkit-scrollbar-corner{}
+  ::-webkit-resizer{}
+  /* EXTRAS */
+  
+  /* IMPORTAÇÃO MEDIA QUERIES */
+  /* IMPORTAÇÃO MEDIA QUERIES */
+  

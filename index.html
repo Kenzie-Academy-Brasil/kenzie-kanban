@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  </head>
+  <body>
+    <div id="app">
+     
+      <header>
+        <div class="app_nome">
+          <h1>Kenzie Kanban</h1>
+        </div>
+        <div class="app_logo">
+          <figure>
+            <img src="./assets/img/logoblue.svg" alt="Logo Kenzie" />
+            <figcaption class="hidden">Logo Kenzie</figcaption>
+          </figure>
+        </div>
+        <div class="app_menu_header">
+          <span>
+            <img src="./assets/img/menu.svg" alt="Menu icon">
+          </span>
+        </div>
+      </header>
+      <section class="app_board">
+        <div class="app_secoes">
+         
+          <div class="app_secao hidden">
+            <div class="app_secao_header">
+              <input type="text" value="Nome seção" />
+            </div>
+            <ul class="app_secao_cards">
+              <li>
+                <h2>Título card</h2>
+                <p>Descrição do card, lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+              </li>
+            </ul>
+            <div class="app_secao_footer">
+              <button>Adicionar novo card</button>
+
+              <div class="app_secao_footer_card hidden">
+                <input
+                  type="text"
+                  name="tituloCard"
+                  id="tituloCard"
+                  placeholder="Título"
+                />
+                <textarea
+                  name="descricaoCard"
+                  id="descricaoCard"
+                  placeholder="Descrição"
+                  value="Descrção do card"
+                ></textarea>
+                <button class="app_secao_footer_salvar_card">Add</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="app_add_secao">
+            <button class="app_button_add_secao">Adicionar nova seção</button>
+            <div class="app_container_add_secao hidden">
+              <input type="text" placeholder="Nome seção"/>
+              <button class="app_input_add_secao">Add</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      
+    </div>
+
+   
+    <script src="./assets/js/secao.js"></script>
+    <script src="./assets/js/card.js"></script>
+    <script src="./assets/js/workspace.js"></script>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
