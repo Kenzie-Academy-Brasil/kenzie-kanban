@@ -1,7 +1,7 @@
 
-const kenzieKanban = new Workspace(1,"Kenzie Kanban")
+const kenzieKanban = new Workspace(0,"Kenzie Kanban")
 const todo = new Secao("Todo")
-const fazerExercicio = new Card(1,"Fazer Exercícios da Kenzie","Preciso praticar mais")
+const fazerExercicio = new Card(0,"Fazer Exercícios da Kenzie","Preciso praticar mais")
 
 todo.adicionarCard(fazerExercicio)
 kenzieKanban.adicionarSecao(todo)
@@ -14,11 +14,17 @@ kenzieKanban.secoes.forEach(imprimirSecoes)
 function imprimirSecoes(secao){
     const nomeSecao  = secao.nome
 
+    // pegar o id da seção que vai ser criada
+    const idSecao = secao.id;
+
     const header = appSecaoHeader(nomeSecao)
-    const footer = appSecaoFooter(1)
+    const footer = appSecaoFooter(idSecao)
 
     const appSecao = document.createElement("div")
     appSecao.classList.add("app_secao")
+
+    // passar o id para o elemento appSeção
+    appSecao.dataset.id = idSecao
 
     const  listaCards = document.createElement("ul")
 
@@ -26,14 +32,53 @@ function imprimirSecoes(secao){
     appSecao.appendChild(listaCards)
     appSecao.appendChild(footer)
     areaSecoes.appendChild(appSecao)
+
+    // adiciona os eventos de clique
+    resetarControles();
 }
 
 //**********************************/
 // AQUI VOCÊ PODE CRIAR SEU DESAFIO
 //***********************************/
-const inputNovaSecao = document.querySelector(".app_container_add_secao input").value
+
+// pegar campo nome da seção
+// pegar botão para adicionar seção
+
+const inputNovaSecao = document.querySelector(".app_container_add_secao input");
+const buttonNovaSecao = document.querySelector('.app_container_add_secao .app_input_add_secao');
+
+buttonNovaSecao.addEventListener('click', salvarSecao);
+
+function salvarSecao(){
+    const nomeNovaSecao = inputNovaSecao.value;
+    inputNovaSecao.value = '';
+
+    const novaSecao = new Secao(nomeNovaSecao);
+    kenzieKanban.adicionarSecao(novaSecao);
+
+    imprimirSecoes(novaSecao);
+}
 
 
+// Função para salvar os cards
+function salvarCard(){
+    const secaoId = this.id;
+    const parent = this.parentElement;
+
+    const inputNomeCard = parent.querySelector('input');
+    const inputDescricaoCard = parent.querySelector('textarea');
+
+    const nomeCard = inputNomeCard.value;
+    const descricaoCard = inputDescricaoCard.value;
+
+    inputNomeCard.value = '';
+    inputDescricaoCard.value = '';
+
+    const novoCard = new Card(secaoId, nomeCard, descricaoCard);
+    kenzieKanban.adicionarCard(secaoId, novoCard);
+
+    templateCards(secaoId, novoCard);
+}
 
 /************************** 
 TEMPLATE HEADER SEÇÃO
@@ -83,10 +128,37 @@ function appSecaoFooter(secaoId){
     return appSecaoFooter
 }
 
+
+// -----------------------------------//
+// CONTROLES
+// -----------------------------------//
+
 const appButtonabrirSecao = document.querySelector('.app_add_secao .app_button_add_secao');
 const appContainerAddSecao = document.querySelector('.app_add_secao .app_container_add_secao');
 appButtonabrirSecao.addEventListener('click', function(){
     appContainerAddSecao.classList.toggle('hidden');
 })
 
+function abrirAddCard() {
+    this.nextElementSibling.classList.toggle("hidden") 
+}
+
+function resetarControles(){
+    const botaoAbrirAddCard = document.querySelectorAll(".app_secao_footer > button")
+    botaoAbrirAddCard.forEach(resetarAbrirAddCard)
+
+    const botaoAddCard = document.querySelectorAll(".app_secao_footer_salvar_card")
+    botaoAddCard.forEach(resetarSalvarCard)
+}
+
+function resetarAbrirAddCard(elemento) {
+    elemento.removeEventListener('click', abrirAddCard)
+    elemento.addEventListener('click', abrirAddCard)
+}
+
+
+function resetarSalvarCard(elemento) {
+    elemento.removeEventListener('click', salvarCard)
+    elemento.addEventListener('click', salvarCard)
+}
 
