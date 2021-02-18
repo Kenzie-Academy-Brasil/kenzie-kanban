@@ -6,6 +6,7 @@ Nessa série vamos aprender __juntos como desenvolver um gerenciador de tarefaz_
 - [Playlist da primeira temporada do Bora Codar](https://www.youtube.com/watch?v=biwpmimjHtU&list=PL0Yihm-vUJs91vtobNQbQIw9hgFoPgYqh)
 - [Bora Codar: Criando um Gerenciador de Tarefas #1](https://www.youtube.com/watch?v=biwpmimjHtU&list=PL0Yihm-vUJs91vtobNQbQIw9hgFoPgYqh)
 - [Bora Codar: Criando um Gerenciador de Tarefas #2](https://www.youtube.com/watch?v=_cP7n8NKtfY&list=PL0Yihm-vUJs91vtobNQbQIw9hgFoPgYqh&index=2)
+
 -[Bora Codar: Criando um Gerenciador de Tarefas #3](https://www.youtube.com/watch?v=PcIzrfKli-0&list=PL0Yihm-vUJs91vtobNQbQIw9hgFoPgYqh&index=3)
 
 ---
