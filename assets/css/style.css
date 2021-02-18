@@ -213,6 +213,19 @@ font-family: 'Open Sans', sans-serif;
             -ms-transition: ease-in-out .1s;
             -o-transition: ease-in-out .1s;
           }
+          .app_board .app_secoes .app_secao ul li button{
+            background-image: url(../img/trash.svg);
+            background-position: center;
+            background-size: cover;
+            width: 17px;
+            height: 17px;
+            display: block;
+            border: none;
+            outline: none;
+            float: right;
+            opacity: 0.8;
+            cursor: pointer;
+          }
           .app_board .app_secoes .app_secao .app_secao_footer button:hover{
             background-color: rgb(94 108 132 / 0.1);
             opacity: 1;
@@ -335,4 +348,33 @@ font-family: 'Open Sans', sans-serif;
   
   /* IMPORTAÇÃO MEDIA QUERIES */
   /* IMPORTAÇÃO MEDIA QUERIES */
-  
+  #app .mensagem-validacao{
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background-color: #c51c34;
+    padding: 18px 28px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: ease-in-out .4s;
+    -webkit-transition: ease-in-out .4s;
+    -moz-transition: ease-in-out .4s;
+    -ms-transition: ease-in-out .4s;
+    -o-transition: ease-in-out .4s;
+  }
+  #app .mensagem-validacao.mostrar{
+    opacity: 1;
+  }
+    #app .mensagem-validacao span{
+      opacity: 0.9;
+    }
+    #app .mensagem-validacao svg{
+      vertical-align: middle;
+      width: 20px;
+    }
+    #app .mensagem-validacao small{
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      vertical-align: middle;
+    }

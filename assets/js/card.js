@@ -1,8 +1,25 @@
 class Card {
-    constructor(id,nome,descricao){
-        this._id        = id;
+    constructor(idSecao,nome,descricao){
+        this._idSecao   = idSecao;
+        this._id        = 0;
         this._nome      = nome;
         this._descricao = descricao
+    }
+
+    set id(id){
+        this._id = id
+    }
+
+    get id(){
+        return this._id 
+    }
+
+    set idSecao(idSecao){
+        this._idSecao = idSecao
+    }
+
+    get idSecao(){
+        return this._idSecao 
     }
 
     set nome(nome){

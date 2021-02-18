@@ -1,8 +1,9 @@
 class Secao{
     constructor(nome){
-        this._id    = 0;
-        this._nome  = nome;
-        this._cards = []
+        this._id     = 0;
+        this._nome   = nome;
+        this._cards  = [];
+        this._idCard = 0;
     }
 
     set id(id){
@@ -26,11 +27,17 @@ class Secao{
     }
 
     adicionarCard(card){
+
+        card.id      = this._idCard
+        card.idSecao = this._id
+        
         this._cards.push(card)
+
+        this._idCard++
     }
 
-    removerCard(card){
-        this._cards.push(card)
+    removerCard(idCard){
+        this._cards.splice(idCard,1)
     }
 
 }

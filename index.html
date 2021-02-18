@@ -29,39 +29,8 @@
 
       <section class="app_board">
         <div class="app_secoes">
-
-          <div class="app_secao hidden">
-            <div class="app_secao_header">
-              <input type="text" value="Nome seção" />
-            </div>
-            <ul class="app_secao_cards">
-              <li>
-                <h2>Título card</h2>
-                <p>Descrição do card, lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-              </li>
-            </ul>
-            <div class="app_secao_footer">
-              <button>Adicionar novo card</button>
-
-              <div class="app_secao_footer_card hidden">
-                <input
-                  type="text"
-                  name="tituloCard"
-                  id="tituloCard"
-                  placeholder="Título"
-                />
-                <textarea
-                  name="descricaoCard"
-                  id="descricaoCard"
-                  placeholder="Descrição"
-                  value="Descrção do card"
-                ></textarea>
-                <button class="app_secao_footer_salvar_card">Add</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="app_add_secao">
+ 
+         <div class="app_add_secao">
             <button class="app_button_add_secao">Adicionar nova seção</button>
             <div class="app_container_add_secao hidden">
               <input type="text" placeholder="Nome seção"/>
@@ -72,13 +41,19 @@
         </div>
       </section>
       
+      <div class="mensagem-validacao">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-circle"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          <small>Preencha os campos corretamente!</small>
+        </span>
+      </div>
     </div>
 
    
     <script src="./assets/js/secao.js"></script>
     <script src="./assets/js/card.js"></script>
     <script src="./assets/js/workspace.js"></script>
+    <script src="./assets/js/controle.js"></script>
     <script src="./assets/js/script.js"></script>
-
   </body>
 </html>

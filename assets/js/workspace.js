@@ -44,4 +44,8 @@ class Workspace{
         
     // }
 
+    removerCard(idCard,idSecao){
+     this.secoes[idSecao].removerCard(idCard)
+    }
+   
 }
